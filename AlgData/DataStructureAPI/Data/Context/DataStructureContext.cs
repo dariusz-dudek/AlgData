@@ -7,5 +7,8 @@
         }
 
         public DbSet<BaseEntity> BaseEntities { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+            => modelBuilder.SeedDatabase();
     }
 }

@@ -1,5 +1,3 @@
-using DataStructureAPI.Controllers.Data.Context;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,6 +7,9 @@ builder.Services.AddControllers();
 
 var connectionString = builder.Configuration.GetConnectionString("DataStructureDB");
 builder.Services.AddDbContext<DataStructureContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IRepository, Repository>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
