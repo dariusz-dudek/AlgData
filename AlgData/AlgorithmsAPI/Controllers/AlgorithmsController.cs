@@ -7,19 +7,26 @@ namespace AlgorithmsAPI.Controllers
     [ApiController]
     public class AlgorithmsController : ControllerBase
     {
-        private readonly IAlghoritms _alghoritms;
+        private readonly IAlgoritms _algoritms;
 
-        public AlgorithmsController(IAlghoritms alghoritms)
+        public AlgorithmsController(IAlgoritms algoritms)
         {
-            _alghoritms = alghoritms;
+            _algoritms = algoritms;
         }
 
         [HttpPost]
         [Route("BubbleSort")]
-        public ActionResult<IResponse> BubbleSort([FromQuery] List<int> list)
-        {
-            var result = _alghoritms.BubbleSort(list);
-            return Ok(result);
-        }
+        public ActionResult<IResponse> BubbleSort(List<int> list)
+            => Ok(_algoritms.BubbleSort(list));
+
+        [HttpPost]
+        [Route("InsertionSort")]
+        public ActionResult<IResponse> InsertionSort(List<int> list)
+            => Ok(_algoritms.InsertionSort(list));
+
+        [HttpPost]
+        [Route("QuickSort")]
+        public ActionResult<IResponse> QuickSort(List<int> list)
+            => Ok(_algoritms.QuickSort(list));
     }
 }

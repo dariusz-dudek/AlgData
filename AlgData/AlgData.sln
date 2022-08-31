@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructureAPI", "DataStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsAPI", "AlgorithmsAPI\AlgorithmsAPI.csproj", "{FC68A5A0-89D2-4717-8BE1-0C505D2C4BA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgDataAPI", "AlgDataAPI\AlgDataAPI.csproj", "{33193C76-69D8-4F57-927E-0FEF42C4BDB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FC68A5A0-89D2-4717-8BE1-0C505D2C4BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC68A5A0-89D2-4717-8BE1-0C505D2C4BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC68A5A0-89D2-4717-8BE1-0C505D2C4BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33193C76-69D8-4F57-927E-0FEF42C4BDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33193C76-69D8-4F57-927E-0FEF42C4BDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33193C76-69D8-4F57-927E-0FEF42C4BDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33193C76-69D8-4F57-927E-0FEF42C4BDB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
