@@ -1,6 +1,6 @@
 ﻿namespace AlgorithmsAPI.Utils
 {
-    public interface IAlgoritms
+    public interface IAlgorithms
     {
         IResponse BubbleSort(List<int> list);
         IResponse InsertionSort(List<int> list);

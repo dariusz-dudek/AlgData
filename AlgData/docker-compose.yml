@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  algdataapi:
+    image: ${DOCKER_REGISTRY-}algdataapi
+    build:
+      context: .
+      dockerfile: AlgDataAPI/Dockerfile
+
+
+  algorithmsapi:
+    image: ${DOCKER_REGISTRY-}algorithmsapi
+    build:
+      context: .
+      dockerfile: AlgorithmsAPI/Dockerfile
+
+
+
+  datastructureapi:
+    image: ${DOCKER_REGISTRY-}datastructureapi
+    build:
+      context: .
+      dockerfile: DataStructureAPI/Dockerfile
+
+
+  redis:
+    image: redis

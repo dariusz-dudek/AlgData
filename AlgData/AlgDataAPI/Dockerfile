@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["AlgorithmsAPI/AlgorithmsAPI.csproj", "AlgorithmsAPI/"]
-RUN dotnet restore "AlgorithmsAPI/AlgorithmsAPI.csproj"
+COPY ["AlgDataAPI/AlgDataAPI.csproj", "AlgDataAPI/"]
+RUN dotnet restore "AlgDataAPI/AlgDataAPI.csproj"
 COPY . .
-WORKDIR "/src/AlgorithmsAPI"
-RUN dotnet build "AlgorithmsAPI.csproj" -c Release -o /app/build
+WORKDIR "/src/AlgDataAPI"
+RUN dotnet build "AlgDataAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "AlgorithmsAPI.csproj" -c Release -o /app/publish
+RUN dotnet publish "AlgDataAPI.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "AlgorithmsAPI.dll"]
+ENTRYPOINT ["dotnet", "AlgDataAPI.dll"]

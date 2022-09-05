@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructureAPI", "DataStructureAPI\DataStructureAPI.csproj", "{B52C6908-A8B1-4689-A6E6-2E61CB3BD52F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructureAPI", "DataStructureAPI\DataStructureAPI.csproj", "{B52C6908-A8B1-4689-A6E6-2E61CB3BD52F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsAPI", "AlgorithmsAPI\AlgorithmsAPI.csproj", "{FC68A5A0-89D2-4717-8BE1-0C505D2C4BA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmsAPI", "AlgorithmsAPI\AlgorithmsAPI.csproj", "{FC68A5A0-89D2-4717-8BE1-0C505D2C4BA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgDataAPI", "AlgDataAPI\AlgDataAPI.csproj", "{33193C76-69D8-4F57-927E-0FEF42C4BDB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgDataAPI", "AlgDataAPI\AlgDataAPI.csproj", "{33193C76-69D8-4F57-927E-0FEF42C4BDB7}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DB594181-112A-45E5-8BA1-B201BE78231E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{33193C76-69D8-4F57-927E-0FEF42C4BDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33193C76-69D8-4F57-927E-0FEF42C4BDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33193C76-69D8-4F57-927E-0FEF42C4BDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB594181-112A-45E5-8BA1-B201BE78231E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB594181-112A-45E5-8BA1-B201BE78231E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB594181-112A-45E5-8BA1-B201BE78231E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB594181-112A-45E5-8BA1-B201BE78231E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

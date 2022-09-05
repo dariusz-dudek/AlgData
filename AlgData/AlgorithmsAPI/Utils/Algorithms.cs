@@ -1,11 +1,11 @@
 ﻿namespace AlgorithmsAPI.Utils
 {
-    public class Algoritms : IAlgoritms
+    public class Algorithms : IAlgorithms
     {
         private readonly IResponse _response;
         private readonly Stopwatch _stopwatch;
 
-        public Algoritms(IResponse response)
+        public Algorithms(IResponse response)
         {
             _response = response;
             _stopwatch = new Stopwatch();
@@ -59,7 +59,71 @@
 
         public IResponse MergeSort(List<int> list)
         {
-            throw new NotImplementedException();
+            _stopwatch.Start();
+            list = MergeSortMethod(list);
+            _stopwatch.Stop();
+
+            var timeSpan = _stopwatch.ElapsedTicks;
+            _response.SortedList = list;
+            _response.TicksOfCalculation = timeSpan;
+            return _response;
+        }
+
+        private List<int> MergeSortMethod(List<int> list)
+        {
+            if (list.Count <= 1)
+                return list;
+
+            List<int> left = new List<int>();
+            List<int> right = new List<int>();
+
+            int middle = list.Count / 2;
+            for (int i = 0; i < middle; i++)
+            {
+                left.Add(list[i]);
+            }
+            for (int i = middle; i < list.Count; i++)
+            {
+                right.Add(list[i]);
+            }
+
+            left = MergeSortMethod(left);
+            right = MergeSortMethod(right);
+            return Merge(left, right);
+        }
+
+        private List<int> Merge(List<int> left, List<int> right)
+        {
+            List<int> result = new List<int>();
+
+            while (left.Count > 0 || right.Count > 0)
+            {
+                if (left.Count > 0 && right.Count > 0)
+                {
+                    if (left.First() <= right.First())
+                    {
+                        result.Add(left.First());
+                        left.Remove(left.First());
+                    }
+                    else
+                    {
+                        result.Add(right.First());
+                        right.Remove(right.First());
+                    }
+                }
+                else if (left.Count > 0)
+                {
+                    result.Add(left.First());
+                    left.Remove(left.First());
+                }
+                else if (right.Count > 0)
+                {
+                    result.Add(right.First());
+
+                    right.Remove(right.First());
+                }
+            }
+            return result;
         }
 
         public IResponse QuickSort(List<int> list)
@@ -105,8 +169,28 @@
 
         public IResponse SelectionSort(List<int> list)
         {
-            throw new NotImplementedException();
+            _stopwatch.Start();
+            int smolest;
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                smolest = i;
+
+                for (int index = i + 1; index < list.Count; index++)
+                {
+                    if (list[index] < list[smolest])
+                        smolest = index;
+                }
+                (list[i], list[smolest]) = (list[smolest], list[i]);
+            }
+            _stopwatch.Stop();
+
+            var timeSpan = _stopwatch.ElapsedTicks;
+            _response.SortedList = list;
+            _response.TicksOfCalculation = timeSpan;
+            return _response;
         }
+
 
         public IResponse TreeSort(List<int> list)
         {

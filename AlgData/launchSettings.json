@@ -1,0 +1,37 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "algdataapi": "StartDebugging",
+        "algorithmsapi": "StartDebugging",
+        "datastructureapi": "StartDebugging",
+        "redis": "StartWithoutDebugging"
+      }
+    },
+    "Start Redis": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "algdataapi": "DoNotStart",
+        "algorithmsapi": "DoNotStart",
+        "datastructureapi": "DoNotStart",
+        "redis": "StartWithoutDebugging"
+      }
+    },
+    "Start My Services": {
+      "commandName": "DockerCompose",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "algdataapi",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "algdataapi": "StartDebugging",
+        "algorithmsapi": "StartDebugging",
+        "datastructureapi": "StartDebugging",
+        "redis": "DoNotStart"
+      }
+    }
+  }
+}
