@@ -4,38 +4,57 @@
     [ApiController]
     public class DataStructureController : ControllerBase
     {
-        private readonly HttpClient _httpClient;
+        private readonly IHttpClientFactory _clientFactory;
+        private readonly IConfiguration _config;
 
-        public DataStructureController(IHttpClientFactory httpClientFactory)
+        public DataStructureController(IHttpClientFactory clientFactory, IConfiguration config)
         {
-            _httpClient = httpClientFactory.CreateClient();
+            _clientFactory = clientFactory;
+            _config = config;
         }
 
-        private async Task<ContentResult> ProxyTo(string url)
-            => Content(await _httpClient.GetStringAsync(url));
+        [HttpGet("{dataStructureName}")]
+        public async Task<IActionResult> GetDataStructureAsync(string dataStructureName)
+        {
+            var client = _clientFactory.CreateClient();
+            var response = await client.GetStringAsync($"{_config.GetValue<string>("DataStructuresApiBaseUrl")}/api/DataStructure/{dataStructureName}");
 
-        [HttpGet]
-        public async Task<IActionResult> Stack()
-            => await ProxyTo("https://localhost:7187/api/datastructure/stack");
+            return Content(response, MediaTypeNames.Application.Json);
+        }
 
-        [HttpGet]
-        public async Task<IActionResult> LinkedList()
-            => await ProxyTo("https://localhost:7187/api/datastructure/linkedlist");
 
-        [HttpGet]
-        public async Task<IActionResult> Graph()
-            => await ProxyTo("https://localhost:7187/api/datastructure/graph");
+        //private readonly HttpClient _httpClient;
 
-        [HttpGet]
-        public async Task<IActionResult> Queue()
-            => await ProxyTo("https://localhost:7187/api/datastructure/queue");
+        //public DataStructureController(IHttpClientFactory httpClientFactory)
+        //{
+        //    _httpClient = httpClientFactory.CreateClient();
+        //}
 
-        [HttpGet]
-        public async Task<IActionResult> BinarySearchTree()
-            => await ProxyTo("https://localhost:7187/api/datastructure/binarysearchtree");
+        //private async Task<ContentResult> ProxyTo(string url)
+        //    => Content(await _httpClient.GetStringAsync(url));
 
-        [HttpGet]
-        public async Task<IActionResult> HashTable()
-            => await ProxyTo("https://localhost:7187/api/datastructure/hashtable");
+        //[HttpGet]
+        //public async Task<IActionResult> Stack()
+        //    => await ProxyTo("http://datastructureapi/api/datastructure/stack");
+
+        //[HttpGet]
+        //public async Task<IActionResult> LinkedList()
+        //    => await ProxyTo("http://datastructureapi/api/datastructure/linkedlist");
+
+        //[HttpGet]
+        //public async Task<IActionResult> Graph()
+        //    => await ProxyTo("http://datastructureapi/api/datastructure/graph");
+
+        //[HttpGet]
+        //public async Task<IActionResult> Queue()
+        //    => await ProxyTo("http://datastructureapi/api/datastructure/queue");
+
+        //[HttpGet]
+        //public async Task<IActionResult> BinarySearchTree()
+        //    => await ProxyTo("http://datastructureapi/api/datastructure/binarysearchtree");
+
+        //[HttpGet]
+        //public async Task<IActionResult> HashTable()
+        //    => await ProxyTo("http://datastructureapi/api/datastructure/hashtable");
     }
 }

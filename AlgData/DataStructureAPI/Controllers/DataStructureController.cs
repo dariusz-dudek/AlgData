@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace DataStructureAPI.Controllers
+﻿namespace DataStructureAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

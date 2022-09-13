@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmsAPI", "Algorithms
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgDataAPI", "AlgDataAPI\AlgDataAPI.csproj", "{33193C76-69D8-4F57-927E-0FEF42C4BDB7}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DB594181-112A-45E5-8BA1-B201BE78231E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructureAPI.Data", "..\DataStructureAPI.Data\DataStructureAPI.Data.csproj", "{1EDADD15-7986-4C09-8181-137167371779}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{33193C76-69D8-4F57-927E-0FEF42C4BDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33193C76-69D8-4F57-927E-0FEF42C4BDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33193C76-69D8-4F57-927E-0FEF42C4BDB7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DB594181-112A-45E5-8BA1-B201BE78231E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB594181-112A-45E5-8BA1-B201BE78231E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB594181-112A-45E5-8BA1-B201BE78231E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB594181-112A-45E5-8BA1-B201BE78231E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EDADD15-7986-4C09-8181-137167371779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EDADD15-7986-4C09-8181-137167371779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EDADD15-7986-4C09-8181-137167371779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EDADD15-7986-4C09-8181-137167371779}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
