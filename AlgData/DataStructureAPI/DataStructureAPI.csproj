@@ -22,7 +22,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\DataStructureAPI.Data\DataStructureAPI.Data.csproj" />
+	  <ProjectReference Include="..\DataStructureAPI.Data\DataStructureAPI.Data.csproj" />
 	</ItemGroup>
 
 </Project>

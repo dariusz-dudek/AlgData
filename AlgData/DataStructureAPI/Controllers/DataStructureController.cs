@@ -1,4 +1,7 @@
-﻿namespace DataStructureAPI.Controllers
+﻿using DataStructureAPI.Data.DAO.Repositories.Interfaces;
+using DataStructureAPI.Data.Entries;
+
+namespace DataStructureAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
