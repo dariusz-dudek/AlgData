@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>4016ffc8-59ee-48db-b9d5-5cdafa894724</ProjectGuid>
+    <ProjectGuid>6b781446-1e12-4a27-bd03-5b4f7e9e6c56</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>algdataapi</DockerServiceName>
