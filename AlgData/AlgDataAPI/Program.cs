@@ -9,15 +9,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHttpClient();
 
-builder.Services.AddStackExchangeRedisCache(options =>
-{
-    options.Configuration = "redis:6379";
-    options.InstanceName = "SampleInstance";
-});
-
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+//Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

@@ -6,7 +6,9 @@ services:
     build:
       context: .
       dockerfile: AlgDataAPI/Dockerfile
-
+    depends_on:
+        - algorithmsapi
+        - datastructureapi
 
   algorithmsapi:
     image: ${DOCKER_REGISTRY-}algorithmsapi
@@ -15,13 +17,23 @@ services:
       dockerfile: AlgorithmsAPI/Dockerfile
 
 
-
   datastructureapi:
     image: ${DOCKER_REGISTRY-}datastructureapi
     build:
       context: .
       dockerfile: DataStructureAPI/Dockerfile
+    depends_on:
+        - db
 
+  db:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    environment:
+      SA_PASSWORD: "Your_password123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - data-structure-db:/var/lib/mssql
 
-  redis:
-    image: redis
+volumes:
+    data-structure-db:
