@@ -4,6 +4,7 @@
     {
         public DataStructureContext(DbContextOptions options) : base(options)
         {
+            Database.EnsureCreated();
         }
 
         public DbSet<BaseEntity> BaseEntities { get; set; }
