@@ -5,8 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
-var connectionString = builder.Configuration.GetConnectionString("DataStructureDB");
-builder.Services.AddDbContext<DataStructureContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<DataStructureContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString(name: "DataStructureDB")));
 
 builder.Services.AddScoped<IRepository, Repository>();
 

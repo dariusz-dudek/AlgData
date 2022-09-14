@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructureAPI", "DataStr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructureAPI.Data", "DataStructureAPI.Data\DataStructureAPI.Data.csproj", "{9599E49D-9898-4111-A3FD-9EFDDC470B6B}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4016FFC8-59EE-48DB-B9D5-5CDAFA894724}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,12 +42,6 @@ Global
 		{9599E49D-9898-4111-A3FD-9EFDDC470B6B}.NoVariablesDefault|Any CPU.Build.0 = Debug|Any CPU
 		{9599E49D-9898-4111-A3FD-9EFDDC470B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9599E49D-9898-4111-A3FD-9EFDDC470B6B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4016FFC8-59EE-48DB-B9D5-5CDAFA894724}.Debug|Any CPU.ActiveCfg = NoVariablesDefault
-		{4016FFC8-59EE-48DB-B9D5-5CDAFA894724}.Debug|Any CPU.Build.0 = NoVariablesDefault
-		{4016FFC8-59EE-48DB-B9D5-5CDAFA894724}.NoVariablesDefault|Any CPU.ActiveCfg = NoVariablesDefault
-		{4016FFC8-59EE-48DB-B9D5-5CDAFA894724}.NoVariablesDefault|Any CPU.Build.0 = NoVariablesDefault
-		{4016FFC8-59EE-48DB-B9D5-5CDAFA894724}.Release|Any CPU.ActiveCfg = NoVariablesDefault
-		{4016FFC8-59EE-48DB-B9D5-5CDAFA894724}.Release|Any CPU.Build.0 = NoVariablesDefault
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
